@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MarvelCharacters</string>
+    <string name="no_items_to_show">No items to show</string>
+    <string name="description">Description</string>
+    <string name="comics">Comics</string>
+    <string name="series">Series</string>
+    <string name="stories">Stories</string>
+    <string name="events">Events</string>
+    <string name="details">Details</string>
+    <string name="wiki">Wiki</string>
+    <string name="retry">Retry</string>
+    <string name="default_error">An error occurred</string>
+</resources>
