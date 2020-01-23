@@ -1,7 +1,9 @@
 package br.pro.lmit.marvelcharacters.ui.characterdetails
 
-import android.content.Context
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import br.pro.lmit.marvelcharacters.data.CharacterRepository
 import br.pro.lmit.marvelcharacters.data.Result
 import br.pro.lmit.marvelcharacters.data.entity.Character
@@ -51,17 +53,16 @@ class CharacterDetailsViewModel(
     fun openWeb(c: Character) {
         val url = c.urls?.getOrNull(0)
         url?.let {
-            _openWebEvent.value = Event(url.url!!)
+            _openWebEvent.postValue(Event(it.url!!))
         }
     }
 
     fun openWiki(c: Character) {
         val url = c.urls?.getOrNull(1)
         url?.let {
-            _openWebEvent.value = Event(url.url!!)
+            _openWikiEvent.postValue(Event(it.url!!))
         }
     }
-
 
 
 }
